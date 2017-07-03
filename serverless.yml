@@ -22,11 +22,8 @@ functions:
 
 plugins:
   - serverless-plugin-write-env-vars
-  - serverless-webpack
 
 custom:
-  webpack: webpack.config.js
-  webpackIncludeModules: true
   writeEnvVars:
     RESIZE_OPTION: ${env:RESIZE_OPTION}
     DEST_S3_BUCKET_NAME: ${env:DEST_S3_BUCKET_NAME}
