@@ -24,6 +24,9 @@ functions:
           rules:
             - prefix: ${env:SOURCE_S3_PREFIX}
 
+plugins:
+  serverless-plugin-typescript
+
 resources:
   Resources:
     DestImageBucket:
