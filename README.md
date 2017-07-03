@@ -48,12 +48,6 @@ yarn execute
 yarn invoke
 ```
 
-### Local invoking AWS Lambda function
-
-```
-yarn webpack:invoke
-```
-
 ### Viewing log output
 
 ```
