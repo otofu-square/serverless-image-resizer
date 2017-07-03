@@ -13,21 +13,16 @@ provider:
 functions:
   imageResizer:
     handler: index.handle
+    environment:
+      RESIZE_OPTION: ${env:RESIZE_OPTION}
+      DEST_S3_BUCKET_NAME: ${env:DEST_S3_BUCKET_NAME}
+      DEST_S3_PREFIX: ${env:DEST_S3_PREFIX}
     events:
       - s3:
           bucket: ${env:SOURCE_S3_BUCKET_NAME}
           event: s3:ObjectCreated:*
           rules:
             - prefix: ${env:SOURCE_S3_PREFIX}
-
-plugins:
-  - serverless-plugin-write-env-vars
-
-custom:
-  writeEnvVars:
-    RESIZE_OPTION: ${env:RESIZE_OPTION}
-    DEST_S3_BUCKET_NAME: ${env:DEST_S3_BUCKET_NAME}
-    DEST_S3_PREFIX: ${env:DEST_S3_PREFIX}
 
 resources:
   Resources:
