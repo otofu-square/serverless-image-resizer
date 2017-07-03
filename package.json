@@ -9,7 +9,9 @@
     "deploy:function": "serverless deploy function -f imageResizer",
     "invoke": "serverless invoke -f imageResizer --path data/event.json",
     "logs": "serverless logs -f imageResizer -t",
-    "setup": "cp env.yml{.template,}"
+    "setup": "cp env.yml{.template,}",
+    "prettier": "prettier --single-quote --trailing-comma all './**/*.ts'",
+    "autoformat": "yarn prettier -- --write"
   },
   "dependencies": {
     "aws-sdk": "^2.6.15",
@@ -17,6 +19,8 @@
     "ulid": "^0.1.0"
   },
   "devDependencies": {
+    "@types/aws-lambda": "^0.0.14",
+    "@types/node": "^8.0.7",
     "prettier": "^1.5.2",
     "serverless": "^1.1.0",
     "serverless-plugin-typescript": "^0.5.0"

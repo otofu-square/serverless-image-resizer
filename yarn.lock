@@ -2,6 +2,14 @@
 # yarn lockfile v1
 
 
+"@types/aws-lambda@^0.0.14":
+  version "0.0.14"
+  resolved "https://registry.yarnpkg.com/@types/aws-lambda/-/aws-lambda-0.0.14.tgz#b4381490153ae4ee52c3ed18ef6e8dc776ed4403"
+
+"@types/node@^8.0.7":
+  version "8.0.7"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.0.7.tgz#fb0ad04b5b6f6eabe0372a32a8f1fbba5c130cae"
+
 agent-base@2:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/agent-base/-/agent-base-2.1.1.tgz#d6de10d5af6132d5bd692427d46fc538539094c7"
